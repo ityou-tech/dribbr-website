@@ -1,0 +1,38 @@
+<section class="section-container py-24 text-center">
+    <div class="max-w-4xl mx-auto">
+        <!-- Main Headline -->
+        <h1 class="heading-xl mb-6">
+            {{ i18n "hero_headline" | default "Breeding, reimagined" }}
+        </h1>
+
+        <!-- Subheadline -->
+        <p class="text-xl sm:text-2xl text-sage-600 mb-6 max-w-2xl mx-auto">
+            {{ i18n "hero_subheadline" | default "Smart tools for passionate bird breeders" }}
+        </p>
+
+        <!-- Tagline -->
+        <p class="text-sage-500 text-base mb-12">
+            {{ i18n "hero_tagline_1" | default "Your passion deserves better tools" }}
+        </p>
+
+        <!-- CTA Buttons -->
+        <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <a href="#beta-signup" class="btn-primary w-full sm:w-auto">
+                {{ i18n "cta_beta" | default "Join Beta Program" }}
+            </a>
+            <a href="#features" class="btn-outline w-full sm:w-auto">
+                {{ i18n "cta_learn_more" | default "Learn More" }}
+            </a>
+        </div>
+
+        <!-- Coming Soon Badge for Android -->
+        <div class="mt-12">
+            <div class="inline-flex items-center space-x-2 px-4 py-2 bg-bird-green-100 text-bird-green-700 rounded-full">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M17.6 10.81L16.19 9.4l3.56-3.55 1.41 1.41c-.11.03-3.56 3.55-3.56 3.55zm-3.94 4.01l-1.19 1.19L5.4 8.94l1.19-1.19c.11.03 7.07 7.07 7.07 7.07zm4.47-12.78l-3 3-1.41-1.41 3-3c.39-.39 1.02-.39 1.41 0 .39.39.39 1.02 0 1.41zM16.5 1.09L1.11 16.47c-.39.39-.39 1.02 0 1.41l4.95 4.95c.39.39 1.02.39 1.41 0L22.86 7.45c.39-.39.39-1.02 0-1.41L17.91.09c-.39-.39-1.02-.39-1.41 0z"/>
+                </svg>
+                <span class="font-medium">{{ i18n "android_beta_available" | default "Android Beta Available" }}</span>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,45 @@
+baseURL = "https://dribbr.app"
+languageCode = "en"
+title = "Dribbr - Smart Bird Breeding App"
+
+# Enable multi-language support
+defaultContentLanguage = "en"
+defaultContentLanguageInSubdir = false
+
+[languages]
+  [languages.en]
+    languageName = "English"
+    languageCode = "en"
+    weight = 1
+    title = "Dribbr - Smart Bird Breeding App"
+    [languages.en.params]
+      description = "Modern, user-friendly bird breeding management app"
+
+  [languages.nl]
+    languageName = "Nederlands"
+    languageCode = "nl"
+    weight = 2
+    title = "Dribbr - Slimme Vogelkweek App"
+    [languages.nl.params]
+      description = "Moderne, gebruiksvriendelijke app voor vogelkwekers"
+
+  [languages.de]
+    languageName = "Deutsch"
+    languageCode = "de"
+    weight = 3
+    title = "Dribbr - Smarte Vogelzucht App"
+    [languages.de.params]
+      description = "Moderne, benutzerfreundliche App für Vogelzuchtmanagement"
+
+[params]
+  author = "Dribbr"
+  description = "Smart tools for passionate bird breeders"
+
+# Build settings
+[build]
+  writeStats = true
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true

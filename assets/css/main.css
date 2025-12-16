@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom styles for Dribbr landing page */
+@layer components {
+  .btn-primary {
+    @apply px-6 py-3 bg-bird-blue-500 text-white font-semibold rounded-lg hover:bg-bird-blue-600 transition-colors duration-200 shadow-md hover:shadow-lg;
+  }
+
+  .btn-secondary {
+    @apply px-6 py-3 bg-bird-green-500 text-white font-semibold rounded-lg hover:bg-bird-green-600 transition-colors duration-200 shadow-md hover:shadow-lg;
+  }
+
+  .btn-outline {
+    @apply px-6 py-3 border-2 border-bird-blue-500 text-bird-blue-500 font-semibold rounded-lg hover:bg-bird-blue-50 transition-colors duration-200;
+  }
+
+  .section-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16;
+  }
+
+  .heading-xl {
+    @apply text-4xl sm:text-5xl lg:text-6xl font-bold text-sage-900 leading-tight;
+  }
+
+  .heading-lg {
+    @apply text-3xl sm:text-4xl font-bold text-sage-900;
+  }
+
+  .heading-md {
+    @apply text-2xl sm:text-3xl font-bold text-sage-900;
+  }
+
+  .card {
+    @apply bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow duration-300;
+  }
+
+  .feature-icon {
+    @apply w-12 h-12 flex items-center justify-center rounded-full text-2xl mb-4;
+  }
+}
+
+@layer base {
+  body {
+    @apply text-sage-800 bg-gradient-aviary;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-sage-900;
+  }
+}

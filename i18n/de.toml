@@ -1,0 +1,91 @@
+# Site
+site_name = "Dribbr"
+
+# Navigation
+nav_features = "Was es macht"
+nav_roadmap = "Was kommt"
+nav_beta = "Probieren"
+nav_feature_request = "Ideen?"
+
+# Hero Section
+hero_headline = "Endlich eine App, die Vogelzucht versteht"
+hero_subheadline = "Verfolgen Sie Ihre Vögel, planen Sie Zuchten und verwalten Sie Ihre Voliere ohne Tabellenkalkulations-Chaos"
+hero_tagline_1 = "Von Züchtern gemacht, für Züchter"
+hero_tagline_2 = "Keine unordentlichen Notizhefte mehr"
+hero_tagline_3 = "Alles was Sie brauchen, nichts was Sie nicht brauchen"
+cta_beta = "Beta testen"
+cta_learn_more = "So funktioniert's"
+android_beta_available = "Android beta jetzt verfügbar"
+
+# Features Section
+features_title = "Was Sie mit Dribbr machen können"
+features_subtitle = "Das Wesentliche, richtig gemacht"
+
+feature_1_title = "Kennen Sie Ihre Vögel"
+feature_1_description = "Die Geschichte jedes Vogels an einem Ort. Eltern, Schlupfdaten, Mutationen, Gesundheitsnotizen – finden Sie was Sie brauchen in Sekunden, nicht Minuten des Blätterns durch Hefte."
+
+feature_2_title = "Planen Sie Ihre Zuchten"
+feature_2_description = "Paaren Sie Vögel, verfolgen Sie Eier, notieren Sie wer wann geschlüpft ist. Erhalten Sie sanfte Erinnerungen, damit Sie keine wichtigen Termine verpassen. Es ist wie ein Zuchtassistent."
+
+feature_3_title = "Sehen Sie Ihre Anlage"
+feature_3_description = "Visuelles Layout Ihrer Käfige und Zuchtboxen. Wissen Sie auf einen Blick, wer wo ist und was passiert. Kein hin und her laufen mehr, um Ihre Notizen zu prüfen."
+
+# Roadmap Section
+roadmap_title = "Wohin wir gehen"
+roadmap_subtitle = "Wir starten einfach und wachsen mit Ihrem Feedback"
+
+roadmap_phase1_title = "Beta (jetzt)"
+roadmap_phase1_description = "Testen mit echten Züchtern auf Android. Die Grundlagen funktionieren – Vögel verfolgen, Zuchten planen, Käfige organisieren. Jetzt verfeinern wir basierend auf Ihrem Feedback."
+
+roadmap_phase2_title = "Android-Veröffentlichung"
+roadmap_phase2_description = "Sobald wir die Kinderkrankheiten mit Beta-Testern behoben haben, veröffentlichen wir es für alle im Play Store. Gleiche Funktionen, nur besser poliert."
+
+roadmap_phase3_title = "iPhone-Version"
+roadmap_phase3_description = "Dribbr zu iOS bringen. Wir wissen, dass viele von Ihnen iPhones benutzen – wir arbeiten daran."
+
+roadmap_phase4_title = "Mehr Funktionen"
+roadmap_phase4_description = "Genetikrechner, Cloud-Backup, vielleicht einige Community-Funktionen. Wir hören auf das, was Sie wirklich brauchen, nicht nur Funktionen hinzufügen um ihrer selbst willen."
+
+status_current = "Jetzt"
+status_upcoming = "Bald"
+status_planned = "Später"
+
+# Beta Signup Section
+beta_title = "Möchten Sie es ausprobieren?"
+beta_subtitle = "Wir suchen Züchter, die die App testen und uns sagen, was funktioniert (und was nicht). Keine Erfahrung nötig – nur ehrliches Feedback."
+beta_disclaimer = "Wir mailen Ihnen, wenn es Platz gibt. Wir spammen nicht und teilen Ihre E-Mail nicht."
+
+# Feature Request Section
+feature_request_title = "Ideen?"
+feature_request_subtitle = "Wir bauen das für Sie, also sagen Sie uns, was Sie brauchen. Was würde Ihr Züchterleben einfacher machen?"
+feature_request_disclaimer = "Wir lesen alles. Können nicht versprechen, dass wir alles umsetzen, aber wir werden es definitiv in Betracht ziehen."
+
+# Form Fields
+form_name = "Name"
+form_name_placeholder = "Ihr Name"
+form_email = "E-Mail"
+form_email_placeholder = "ihre@email.de"
+form_experience = "Wie lange züchten Sie schon?"
+form_experience_placeholder = "Optional – nur neugierig"
+form_experience_beginner = "Gerade angefangen (weniger als ein Jahr)"
+form_experience_intermediate = "Ein paar Jahre (1-5 Jahre)"
+form_experience_advanced = "Ziemlich erfahren (5+ Jahre)"
+form_experience_professional = "Professioneller Züchter"
+form_submit_beta = "Ich bin dabei"
+
+form_feature_type = "Welche Art von Idee?"
+form_feature_type_placeholder = "Wählen Sie eine, wenn Sie möchten"
+form_feature_new = "Etwas völlig Neues"
+form_feature_improvement = "Etwas besser machen"
+form_feature_integration = "Mit anderem Tool verbinden"
+form_feature_other = "Etwas anderes"
+form_feature_description = "Erzählen Sie uns davon"
+form_feature_description_placeholder = "Was würden Sie gerne sehen? Wie würde es Ihnen helfen?"
+form_submit_feature = "Idee senden"
+
+# Footer
+footer_tagline = "Peters' Werk"
+footer_quick_links = "Schnelllinks"
+footer_language = "Sprache"
+footer_rights = "Alle Rechte vorbehalten."
+footer_bird_name = "Wissenswertes: Die ersten 4 Buchstaben sind \"bird\" (Vogel) rückwärts + \"br\" für breeder (Züchter)."

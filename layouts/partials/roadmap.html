@@ -1,0 +1,114 @@
+<section id="roadmap" class="section-container">
+    <div class="text-center mb-16">
+        <h2 class="heading-lg mb-4">
+            {{ i18n "roadmap_title" | default "Our Journey" }}
+        </h2>
+        <p class="text-xl text-sage-600 max-w-2xl mx-auto">
+            {{ i18n "roadmap_subtitle" | default "Building the future of bird breeding management" }}
+        </p>
+    </div>
+
+    <div class="max-w-4xl mx-auto">
+        <!-- Roadmap Timeline -->
+        <div class="space-y-8">
+            <!-- Phase 1: Beta -->
+            <div class="flex gap-6">
+                <div class="flex flex-col items-center">
+                    <div class="w-12 h-12 rounded-full bg-bird-green-500 text-white flex items-center justify-center font-bold text-lg shadow-lg">
+                        1
+                    </div>
+                    <div class="flex-1 w-1 bg-bird-green-200 mt-2"></div>
+                </div>
+                <div class="flex-1 pb-8">
+                    <div class="card">
+                        <div class="flex items-center justify-between mb-2">
+                            <h3 class="text-xl font-bold text-sage-900">
+                                {{ i18n "roadmap_phase1_title" | default "Beta Testing" }}
+                            </h3>
+                            <span class="px-3 py-1 bg-bird-green-100 text-bird-green-700 rounded-full text-sm font-medium">
+                                {{ i18n "status_current" | default "Current" }}
+                            </span>
+                        </div>
+                        <p class="text-sage-600">
+                            {{ i18n "roadmap_phase1_description" | default "Android beta with core features: bird management, breeding tracking, and visual cage interface. Limited to beta testers." }}
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Phase 2: Android Launch -->
+            <div class="flex gap-6">
+                <div class="flex flex-col items-center">
+                    <div class="w-12 h-12 rounded-full bg-bird-blue-500 text-white flex items-center justify-center font-bold text-lg shadow-lg">
+                        2
+                    </div>
+                    <div class="flex-1 w-1 bg-bird-blue-200 mt-2"></div>
+                </div>
+                <div class="flex-1 pb-8">
+                    <div class="card">
+                        <div class="flex items-center justify-between mb-2">
+                            <h3 class="text-xl font-bold text-sage-900">
+                                {{ i18n "roadmap_phase2_title" | default "Android Release" }}
+                            </h3>
+                            <span class="px-3 py-1 bg-bird-blue-100 text-bird-blue-700 rounded-full text-sm font-medium">
+                                {{ i18n "status_upcoming" | default "Upcoming" }}
+                            </span>
+                        </div>
+                        <p class="text-sage-600">
+                            {{ i18n "roadmap_phase2_description" | default "Full public release on Google Play Store with refined features based on beta feedback and enhanced performance." }}
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Phase 3: iOS Launch -->
+            <div class="flex gap-6">
+                <div class="flex flex-col items-center">
+                    <div class="w-12 h-12 rounded-full bg-bird-orange-500 text-white flex items-center justify-center font-bold text-lg shadow-lg">
+                        3
+                    </div>
+                    <div class="flex-1 w-1 bg-bird-orange-200 mt-2"></div>
+                </div>
+                <div class="flex-1 pb-8">
+                    <div class="card">
+                        <div class="flex items-center justify-between mb-2">
+                            <h3 class="text-xl font-bold text-sage-900">
+                                {{ i18n "roadmap_phase3_title" | default "iOS Release" }}
+                            </h3>
+                            <span class="px-3 py-1 bg-sage-100 text-sage-700 rounded-full text-sm font-medium">
+                                {{ i18n "status_planned" | default "Planned" }}
+                            </span>
+                        </div>
+                        <p class="text-sage-600">
+                            {{ i18n "roadmap_phase3_description" | default "Launch on Apple App Store, bringing Dribbr to iOS users with platform-specific optimizations." }}
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Phase 4: Advanced Features -->
+            <div class="flex gap-6">
+                <div class="flex flex-col items-center">
+                    <div class="w-12 h-12 rounded-full bg-bird-yellow-500 text-white flex items-center justify-center font-bold text-lg shadow-lg">
+                        4
+                    </div>
+                </div>
+                <div class="flex-1">
+                    <div class="card">
+                        <div class="flex items-center justify-between mb-2">
+                            <h3 class="text-xl font-bold text-sage-900">
+                                {{ i18n "roadmap_phase4_title" | default "Advanced Features" }}
+                            </h3>
+                            <span class="px-3 py-1 bg-sage-100 text-sage-700 rounded-full text-sm font-medium">
+                                {{ i18n "status_planned" | default "Planned" }}
+                            </span>
+                        </div>
+                        <p class="text-sage-600">
+                            {{ i18n "roadmap_phase4_description" | default "Cloud sync, advanced genetics calculator, community features, and integration with avian databases." }}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

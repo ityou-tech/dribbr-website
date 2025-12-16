@@ -1,0 +1,91 @@
+# Site
+site_name = "Dribbr"
+
+# Navigation
+nav_features = "Wat het doet"
+nav_roadmap = "Wat er komt"
+nav_beta = "Probeer het"
+nav_feature_request = "Ideeën?"
+
+# Hero Section
+hero_headline = "Een app die vogelkwekers begrijpt"
+hero_subheadline = "Volg je vogels, plan je kweek en beheer je volière zonder spreadsheet-gedoe"
+hero_tagline_1 = "Gemaakt door vader (Bert Peters) en zoon (Enri Peters)"
+hero_tagline_2 = "Geen rommelige schriften en losse notities meer"
+hero_tagline_3 = "Alles wat je nodig hebt, niks wat je niet nodig hebt"
+cta_beta = "Probeer de beta"
+cta_learn_more = "Zie hoe het werkt"
+android_beta_available = "Android beta nu beschikbaar"
+
+# Features Section
+features_title = "Wat je met Dribbr kunt doen"
+features_subtitle = "Het belangrijkste, goed gedaan"
+
+feature_1_title = "Ken je vogels"
+feature_1_description = "Het verhaal van elke vogel op één plek. Ouders, uitkomstdata, mutaties, gezondheidsnotities – vind wat je nodig hebt in seconden, niet minuten bladeren door schriften."
+
+feature_2_title = "Plan je kweek"
+feature_2_description = "Koppel vogels, volg eieren, noteer wie wanneer is uitgekomen. Krijg vriendelijke herinneringen zodat je geen belangrijke data mist. Het is als een kweekassistent."
+
+feature_3_title = "Zie je opzet"
+feature_3_description = "Visuele indeling van je kooien en broedblokken. Weet in één oogopslag wie waar zit en wat er gebeurt. Geen heen en weer lopen meer om je notities te checken."
+
+# Roadmap Section
+roadmap_title = "Waar we naartoe gaan"
+roadmap_subtitle = "We beginnen simpel en groeien met jouw feedback"
+
+roadmap_phase1_title = "Beta (nu)"
+roadmap_phase1_description = "Testen met echte kwekers op Android. De basis werkt – vogels volgen, plan je kweek, kooien organiseren. Nu verfijnen we op basis van jouw feedback."
+
+roadmap_phase2_title = "Android lancering"
+roadmap_phase2_description = "Zodra we de kinderziektes eruit hebben met betatesters, brengen we het uit voor iedereen op de Play Store. Zelfde functies, gewoon meer gepolijst."
+
+roadmap_phase3_title = "iPhone versie"
+roadmap_phase3_description = "Dribbr naar iOS brengen. We weten dat veel van jullie iPhones gebruiken – we werken eraan."
+
+roadmap_phase4_title = "Meer functies"
+roadmap_phase4_description = "Genetica calculator, cloud backup, misschien wat community functies. We luisteren naar wat je écht nodig hebt, niet zomaar functies toevoegen."
+
+status_current = "Nu"
+status_upcoming = "Binnenkort"
+status_planned = "Later"
+
+# Beta Signup Section
+beta_title = "Wil je het proberen?"
+beta_subtitle = "We zoeken kwekers om de app te testen en te vertellen wat werkt (en wat niet). Geen ervaring nodig – gewoon eerlijke feedback."
+beta_disclaimer = "We mailen je als er plek is. We spammen niet en delen je e-mail niet."
+
+# Feature Request Section
+feature_request_title = "Ideeën?"
+feature_request_subtitle = "We bouwen dit voor jou, dus vertel ons wat je nodig hebt. Wat zou jouw kwekersbestaan makkelijker maken?"
+feature_request_disclaimer = "We lezen alles. Kunnen niet beloven dat we alles bouwen, maar we overwegen het zeker."
+
+# Form Fields
+form_name = "Naam"
+form_name_placeholder = "Je naam"
+form_email = "E-mail"
+form_email_placeholder = "jouw@email.nl"
+form_experience = "Hoe lang kweek je al?"
+form_experience_placeholder = "Optioneel – gewoon nieuwsgierig"
+form_experience_beginner = "Net begonnen (minder dan een jaar)"
+form_experience_intermediate = "Paar jaar (1-5 jaar)"
+form_experience_advanced = "Best ervaren (5+ jaar)"
+form_experience_professional = "Professionele kweker"
+form_submit_beta = "Ik doe mee"
+
+form_feature_type = "Wat voor soort idee?"
+form_feature_type_placeholder = "Kies er een als je wilt"
+form_feature_new = "Iets compleet nieuws"
+form_feature_improvement = "Iets beter maken"
+form_feature_integration = "Koppelen met andere tool"
+form_feature_other = "Iets anders"
+form_feature_description = "Vertel ons erover"
+form_feature_description_placeholder = "Wat zou je graag willen zien? Hoe zou het je helpen?"
+form_submit_feature = "Idee versturen"
+
+# Footer
+footer_tagline = "Iets beters van Peters"
+footer_quick_links = "Snelle links"
+footer_language = "Taal"
+footer_rights = "Alle rechten voorbehouden."
+footer_bird_name = "Leuk weetje: De eerste 4 letters zijn \"bird\" (vogel) achterstevoren + \"br\" van breeder (kweker)."

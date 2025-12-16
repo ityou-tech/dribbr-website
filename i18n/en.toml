@@ -1,0 +1,91 @@
+# Site
+site_name = "Dribbr"
+
+# Navigation
+nav_features = "What it does"
+nav_roadmap = "What's next"
+nav_beta = "Try it"
+nav_feature_request = "Got ideas?"
+
+# Hero Section
+hero_headline = "Finally, an app that gets bird breeding"
+hero_subheadline = "Track your birds, plan breedings, and manage your aviary without the spreadsheet headaches"
+hero_tagline_1 = "Built by breeders, for breeders"
+hero_tagline_2 = "No more messy notebooks and scattered notes"
+hero_tagline_3 = "Everything you need, nothing you don't"
+cta_beta = "Try the beta"
+cta_learn_more = "See how it works"
+android_beta_available = "Android beta now available"
+
+# Features Section
+features_title = "What you can do with Dribbr"
+features_subtitle = "The essentials, done right"
+
+feature_1_title = "Know your birds"
+feature_1_description = "Every bird's story in one place. Parents, hatch dates, mutations, health notes – find what you need in seconds, not minutes of flipping through notebooks."
+
+feature_2_title = "Plan your breedings"
+feature_2_description = "Pair birds, track eggs, record who hatched when. Get gentle reminders so you don't miss important dates. It's like having a breeding assistant."
+
+feature_3_title = "See your setup"
+feature_3_description = "Visual layout of your cages and breeding boxes. Know at a glance who's where and what's happening. No more walking back and forth to check your notes."
+
+# Roadmap Section
+roadmap_title = "Where we're headed"
+roadmap_subtitle = "We're starting simple and growing with your feedback"
+
+roadmap_phase1_title = "Beta (right now)"
+roadmap_phase1_description = "Testing with real breeders on Android. The core stuff works – tracking birds, planning breedings, organizing cages. Now we're refining based on your feedback."
+
+roadmap_phase2_title = "Android launch"
+roadmap_phase2_description = "Once we've ironed out the kinks with beta testers, we'll release to everyone on the Play Store. Same features, just more polished."
+
+roadmap_phase3_title = "iPhone version"
+roadmap_phase3_description = "Bringing Dribbr to iOS. We know many of you use iPhones – we're working on it."
+
+roadmap_phase4_title = "More features"
+roadmap_phase4_description = "Genetics calculator, cloud backup, maybe some community features. We're listening to what you actually need, not just adding features for the sake of it."
+
+status_current = "Now"
+status_upcoming = "Soon"
+status_planned = "Later"
+
+# Beta Signup Section
+beta_title = "Want to try it?"
+beta_subtitle = "We're looking for breeders to test the app and tell us what works (and what doesn't). No experience required – just honest feedback."
+beta_disclaimer = "We'll email you when there's space. We won't spam you or share your email."
+
+# Feature Request Section
+feature_request_title = "Got ideas?"
+feature_request_subtitle = "We're building this for you, so tell us what you need. What would make your breeding life easier?"
+feature_request_disclaimer = "We read everything. Can't promise we'll build it all, but we'll definitely consider it."
+
+# Form Fields
+form_name = "Name"
+form_name_placeholder = "Your name"
+form_email = "Email"
+form_email_placeholder = "your@email.com"
+form_experience = "How long have you been breeding?"
+form_experience_placeholder = "Optional – just curious"
+form_experience_beginner = "Just started (less than a year)"
+form_experience_intermediate = "A few years (1-5 years)"
+form_experience_advanced = "Pretty experienced (5+ years)"
+form_experience_professional = "I'm a professional breeder"
+form_submit_beta = "Count me in"
+
+form_feature_type = "What kind of idea?"
+form_feature_type_placeholder = "Pick one if you want"
+form_feature_new = "Something completely new"
+form_feature_improvement = "Make something better"
+form_feature_integration = "Connect with another tool"
+form_feature_other = "Something else"
+form_feature_description = "Tell us about it"
+form_feature_description_placeholder = "What would you like to see? How would it help you?"
+form_submit_feature = "Send idea"
+
+# Footer
+footer_tagline = "A Peters creation"
+footer_quick_links = "Quick links"
+footer_language = "Language"
+footer_rights = "All rights reserved."
+footer_bird_name = "Fun fact: The first 4 letters are \"bird\" spelled backwards + \"br\" for breeder."

@@ -1,0 +1,44 @@
+[build]
+  publish = "public"
+  command = "npm install && hugo --minify"
+
+[build.environment]
+  HUGO_VERSION = "0.152.2"
+  NODE_VERSION = "20"
+
+[context.production.environment]
+  HUGO_ENV = "production"
+
+[context.deploy-preview]
+  command = "npm install && hugo --buildFuture --buildDrafts --minify"
+
+[context.branch-deploy]
+  command = "npm install && hugo --buildFuture --minify"
+
+# Redirect rules for language switching
+[[redirects]]
+  from = "/*"
+  to = "/en/:splat"
+  status = 302
+  force = false
+  conditions = {Language = ["en"]}
+
+# Headers for security
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "geolocation=(), microphone=(), camera=()"
+
+# Cache static assets
+[[headers]]
+  for = "/css/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
