@@ -8,9 +8,9 @@ nav_beta = "Probeer het"
 nav_feature_request = "Ideeën?"
 
 # Hero Section
-hero_headline = "Een app die vogelkwekers begrijpt"
-hero_subheadline = "Volg je vogels, plan je kweek en beheer je volière zonder spreadsheet-gedoe"
-hero_tagline_1 = "Gemaakt door vader (Bert Peters) en zoon (Enri Peters)"
+hero_headline = "Een app die grasparkietenkwekers begrijpt"
+hero_subheadline = "Volg je grasparkieten, plan je kweek en beheer je volière zonder spreadsheet-gedoe"
+hero_tagline_1 = "Gemaakt door grasparkietenkweker (Bert Peters) en IT-specialist (Enri Peters)"
 hero_tagline_2 = "Geen rommelige schriften en losse notities meer"
 hero_tagline_3 = "Alles wat je nodig hebt, niks wat je niet nodig hebt"
 cta_beta = "Probeer de beta"
@@ -21,11 +21,11 @@ android_beta_available = "Android beta nu beschikbaar"
 features_title = "Wat je met Dribbr kunt doen"
 features_subtitle = "Het belangrijkste, goed gedaan"
 
-feature_1_title = "Ken je vogels"
-feature_1_description = "Het verhaal van elke vogel op één plek. Ouders, uitkomstdata, mutaties, gezondheidsnotities – vind wat je nodig hebt in seconden, niet minuten bladeren door schriften."
+feature_1_title = "Ken je grasparkieten"
+feature_1_description = "Het verhaal van elke grasparkiet op één plek. Voeg foto's toe, noteer ouders, uitkomstdata, mutaties, gezondheidsnotities – vind wat je nodig hebt in seconden, niet minuten bladeren door schriften."
 
 feature_2_title = "Plan je kweek"
-feature_2_description = "Koppel vogels, volg eieren, noteer wie wanneer is uitgekomen. Krijg vriendelijke herinneringen zodat je geen belangrijke data mist. Het is als een kweekassistent."
+feature_2_description = "Koppel grasparkieten, volg eieren, noteer wie wanneer is uitgekomen. Krijg vriendelijke herinneringen zodat je geen belangrijke data mist. Het is als een kweekassistent."
 
 feature_3_title = "Zie je opzet"
 feature_3_description = "Visuele indeling van je kooien en broedblokken. Weet in één oogopslag wie waar zit en wat er gebeurt. Geen heen en weer lopen meer om je notities te checken."
@@ -35,7 +35,7 @@ roadmap_title = "Waar we naartoe gaan"
 roadmap_subtitle = "We beginnen simpel en groeien met jouw feedback"
 
 roadmap_phase1_title = "Beta (nu)"
-roadmap_phase1_description = "Testen met echte kwekers op Android. De basis werkt – vogels volgen, plan je kweek, kooien organiseren. Nu verfijnen we op basis van jouw feedback."
+roadmap_phase1_description = "Testen met echte grasparkietenkwekers op Android. De basis werkt – grasparkieten volgen, plan je kweek, kooien organiseren. Nu verfijnen we op basis van jouw feedback."
 
 roadmap_phase2_title = "Android lancering"
 roadmap_phase2_description = "Zodra we de kinderziektes eruit hebben met betatesters, brengen we het uit voor iedereen op de Play Store. Zelfde functies, gewoon meer gepolijst."

@@ -8,9 +8,9 @@ nav_beta = "Probieren"
 nav_feature_request = "Ideen?"
 
 # Hero Section
-hero_headline = "Endlich eine App, die Vogelzucht versteht"
-hero_subheadline = "Verfolgen Sie Ihre Vögel, planen Sie Zuchten und verwalten Sie Ihre Voliere ohne Tabellenkalkulations-Chaos"
-hero_tagline_1 = "Von Züchtern gemacht, für Züchter"
+hero_headline = "Endlich eine App, die Wellensittichzucht versteht"
+hero_subheadline = "Verfolgen Sie Ihre Wellensittiche, planen Sie Zuchten und verwalten Sie Ihre Voliere ohne Tabellenkalkulations-Chaos"
+hero_tagline_1 = "Von einem Wellensittichzüchter (Bert Peters) und IT-Spezialisten (Enri Peters) gemacht"
 hero_tagline_2 = "Keine unordentlichen Notizhefte mehr"
 hero_tagline_3 = "Alles was Sie brauchen, nichts was Sie nicht brauchen"
 cta_beta = "Beta testen"
@@ -21,11 +21,11 @@ android_beta_available = "Android beta jetzt verfügbar"
 features_title = "Was Sie mit Dribbr machen können"
 features_subtitle = "Das Wesentliche, richtig gemacht"
 
-feature_1_title = "Kennen Sie Ihre Vögel"
-feature_1_description = "Die Geschichte jedes Vogels an einem Ort. Eltern, Schlupfdaten, Mutationen, Gesundheitsnotizen – finden Sie was Sie brauchen in Sekunden, nicht Minuten des Blätterns durch Hefte."
+feature_1_title = "Kennen Sie Ihre Wellensittiche"
+feature_1_description = "Die Geschichte jedes Wellensittichs an einem Ort. Fotos hinzufügen, Eltern notieren, Schlupfdaten, Mutationen, Gesundheitsnotizen – finden Sie was Sie brauchen in Sekunden, nicht Minuten des Blätterns durch Hefte."
 
 feature_2_title = "Planen Sie Ihre Zuchten"
-feature_2_description = "Paaren Sie Vögel, verfolgen Sie Eier, notieren Sie wer wann geschlüpft ist. Erhalten Sie sanfte Erinnerungen, damit Sie keine wichtigen Termine verpassen. Es ist wie ein Zuchtassistent."
+feature_2_description = "Paaren Sie Wellensittiche, verfolgen Sie Eier, notieren Sie wer wann geschlüpft ist. Erhalten Sie sanfte Erinnerungen, damit Sie keine wichtigen Termine verpassen. Es ist wie ein Zuchtassistent."
 
 feature_3_title = "Sehen Sie Ihre Anlage"
 feature_3_description = "Visuelles Layout Ihrer Käfige und Zuchtboxen. Wissen Sie auf einen Blick, wer wo ist und was passiert. Kein hin und her laufen mehr, um Ihre Notizen zu prüfen."
@@ -35,7 +35,7 @@ roadmap_title = "Wohin wir gehen"
 roadmap_subtitle = "Wir starten einfach und wachsen mit Ihrem Feedback"
 
 roadmap_phase1_title = "Beta (jetzt)"
-roadmap_phase1_description = "Testen mit echten Züchtern auf Android. Die Grundlagen funktionieren – Vögel verfolgen, Zuchten planen, Käfige organisieren. Jetzt verfeinern wir basierend auf Ihrem Feedback."
+roadmap_phase1_description = "Testen mit echten Wellensittichzüchtern auf Android. Die Grundlagen funktionieren – Wellensittiche verfolgen, Zuchten planen, Käfige organisieren. Jetzt verfeinern wir basierend auf Ihrem Feedback."
 
 roadmap_phase2_title = "Android-Veröffentlichung"
 roadmap_phase2_description = "Sobald wir die Kinderkrankheiten mit Beta-Testern behoben haben, veröffentlichen wir es für alle im Play Store. Gleiche Funktionen, nur besser poliert."
@@ -52,7 +52,7 @@ status_planned = "Später"
 
 # Beta Signup Section
 beta_title = "Möchten Sie es ausprobieren?"
-beta_subtitle = "Wir suchen Züchter, die die App testen und uns sagen, was funktioniert (und was nicht). Keine Erfahrung nötig – nur ehrliches Feedback."
+beta_subtitle = "Wir suchen Wellensittichzüchter, die die App testen und uns sagen, was funktioniert (und was nicht). Keine Erfahrung nötig – nur ehrliches Feedback."
 beta_disclaimer = "Wir mailen Ihnen, wenn es Platz gibt. Wir spammen nicht und teilen Ihre E-Mail nicht."
 
 # Feature Request Section
@@ -65,12 +65,12 @@ form_name = "Name"
 form_name_placeholder = "Ihr Name"
 form_email = "E-Mail"
 form_email_placeholder = "ihre@email.de"
-form_experience = "Wie lange züchten Sie schon?"
+form_experience = "Wie lange züchten Sie schon Wellensittiche?"
 form_experience_placeholder = "Optional – nur neugierig"
 form_experience_beginner = "Gerade angefangen (weniger als ein Jahr)"
 form_experience_intermediate = "Ein paar Jahre (1-5 Jahre)"
 form_experience_advanced = "Ziemlich erfahren (5+ Jahre)"
-form_experience_professional = "Professioneller Züchter"
+form_experience_professional = "Professioneller Wellensittichzüchter"
 form_submit_beta = "Ich bin dabei"
 
 form_feature_type = "Welche Art von Idee?"
