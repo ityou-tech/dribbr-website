@@ -1,10 +1,14 @@
 <!DOCTYPE html>
-<html lang="{{ .Site.Language.Lang }}">
+<html lang="{{ .Site.Language.Lang }}" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="{{ .Site.Params.description }}">
     <title>{{ .Title }} | {{ .Site.Title }}</title>
+
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     {{- $styles := resources.Get "css/main.css" -}}
     {{- $styles = $styles | css.PostCSS -}}
@@ -21,8 +25,11 @@
     <meta property="og:description" content="{{ .Site.Params.description }}">
     <meta property="og:type" content="website">
     <meta property="og:url" content="{{ .Permalink }}">
+
+    <!-- Theme color for mobile browsers -->
+    <meta name="theme-color" content="#3a8568">
 </head>
-<body class="min-h-screen">
+<body class="min-h-screen overflow-x-hidden">
     {{ partial "header.html" . }}
 
     <main>
@@ -30,5 +37,12 @@
     </main>
 
     {{ partial "footer.html" . }}
+
+    <!-- Smooth scroll offset for fixed header -->
+    <style>
+        html {
+            scroll-padding-top: 6rem;
+        }
+    </style>
 </body>
 </html>

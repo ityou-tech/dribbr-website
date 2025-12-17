@@ -1,38 +1,95 @@
-<section class="section-container py-24 text-center">
-    <div class="max-w-4xl mx-auto">
-        <!-- Main Headline -->
-        <h1 class="heading-xl mb-6">
-            {{ i18n "hero_headline" | default "Breeding, reimagined" }}
-        </h1>
+<section class="relative min-h-[90vh] flex items-center overflow-hidden">
+    <!-- Floating decorative shapes -->
+    <div class="float-shape float-shape-1 -top-20 -right-32 lg:right-10"></div>
+    <div class="float-shape float-shape-2 top-1/3 -left-24 lg:left-5"></div>
+    <div class="float-shape float-shape-3 bottom-20 right-1/4"></div>
 
-        <!-- Subheadline -->
-        <p class="text-xl sm:text-2xl text-sage-600 mb-6 max-w-2xl mx-auto">
-            {{ i18n "hero_subheadline" | default "Smart tools for passionate bird breeders" }}
-        </p>
+    <!-- Subtle pattern overlay -->
+    <div class="absolute inset-0 feather-bg opacity-30"></div>
 
-        <!-- Tagline -->
-        <p class="text-sage-500 text-base mb-12">
-            {{ i18n "hero_tagline_1" | default "Your passion deserves better tools" }}
-        </p>
+    <div class="section-container relative z-10">
+        <div class="max-w-5xl mx-auto">
+            <!-- Eyebrow badge -->
+            <div class="flex justify-center mb-8 animate-fade-up">
+                <div class="badge badge-aviary">
+                    <svg class="w-4 h-4 animate-pulse-soft" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M5 2a1 1 0 011 1v1h1a1 1 0 010 2H6v1a1 1 0 01-2 0V6H3a1 1 0 010-2h1V3a1 1 0 011-1zm0 10a1 1 0 011 1v1h1a1 1 0 110 2H6v1a1 1 0 11-2 0v-1H3a1 1 0 110-2h1v-1a1 1 0 011-1zM12 2a1 1 0 01.967.744L14.146 7.2 17.5 9.134a1 1 0 010 1.732l-3.354 1.935-1.18 4.455a1 1 0 01-1.933 0L9.854 12.8 6.5 10.866a1 1 0 010-1.732l3.354-1.935 1.18-4.455A1 1 0 0112 2z" clip-rule="evenodd"/>
+                    </svg>
+                    <span>{{ i18n "android_beta_available" | default "Android Beta Available" }}</span>
+                </div>
+            </div>
 
-        <!-- CTA Buttons -->
-        <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <a href="#beta-signup" class="btn-primary w-full sm:w-auto">
-                {{ i18n "cta_beta" | default "Join Beta Program" }}
-            </a>
-            <a href="#features" class="btn-outline w-full sm:w-auto">
-                {{ i18n "cta_learn_more" | default "Learn More" }}
-            </a>
-        </div>
+            <!-- Main Headline with staggered animation -->
+            <h1 class="heading-xl text-center mb-8 animate-fade-up delay-100">
+                <span class="block">{{ i18n "hero_headline_1" | default "Breeding," }}</span>
+                <span class="block mt-2">
+                    <span class="text-gradient">{{ i18n "hero_headline_2" | default "reimagined" }}</span>
+                </span>
+            </h1>
 
-        <!-- Coming Soon Badge for Android -->
-        <div class="mt-12">
-            <div class="inline-flex items-center space-x-2 px-4 py-2 bg-bird-green-100 text-bird-green-700 rounded-full">
-                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M17.6 10.81L16.19 9.4l3.56-3.55 1.41 1.41c-.11.03-3.56 3.55-3.56 3.55zm-3.94 4.01l-1.19 1.19L5.4 8.94l1.19-1.19c.11.03 7.07 7.07 7.07 7.07zm4.47-12.78l-3 3-1.41-1.41 3-3c.39-.39 1.02-.39 1.41 0 .39.39.39 1.02 0 1.41zM16.5 1.09L1.11 16.47c-.39.39-.39 1.02 0 1.41l4.95 4.95c.39.39 1.02.39 1.41 0L22.86 7.45c.39-.39.39-1.02 0-1.41L17.91.09c-.39-.39-1.02-.39-1.41 0z"/>
-                </svg>
-                <span class="font-medium">{{ i18n "android_beta_available" | default "Android Beta Available" }}</span>
+            <!-- Subheadline -->
+            <p class="text-xl sm:text-2xl lg:text-3xl text-plumage-600 text-center mb-6 max-w-3xl mx-auto font-light leading-relaxed animate-fade-up delay-200">
+                {{ i18n "hero_subheadline" | default "Smart tools for passionate bird breeders" }}
+            </p>
+
+            <!-- Decorative line -->
+            <div class="flex justify-center mb-8 animate-fade-up delay-300">
+                <div class="decorative-line"></div>
+            </div>
+
+            <!-- Tagline -->
+            <p class="text-plumage-500 text-center text-lg mb-12 animate-fade-up delay-300">
+                {{ i18n "hero_tagline_1" | default "Your passion deserves better tools" }}
+            </p>
+
+            <!-- CTA Buttons with staggered reveal -->
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-up delay-400">
+                <a href="#beta-signup" class="btn-primary w-full sm:w-auto group">
+                    <span class="flex items-center justify-center gap-2">
+                        {{ i18n "cta_beta" | default "Join Beta Program" }}
+                        <svg class="w-5 h-5 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                        </svg>
+                    </span>
+                </a>
+                <a href="#features" class="btn-outline w-full sm:w-auto">
+                    {{ i18n "cta_learn_more" | default "Learn More" }}
+                </a>
+            </div>
+
+            <!-- Trust indicators -->
+            <div class="mt-16 flex flex-col sm:flex-row items-center justify-center gap-6 text-sm text-plumage-500 animate-fade-up delay-500">
+                <div class="flex items-center gap-2">
+                    <svg class="w-5 h-5 text-aviary-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                    </svg>
+                    <span>{{ i18n "trust_privacy" | default "Privacy-first" }}</span>
+                </div>
+                <div class="hidden sm:block w-1 h-1 rounded-full bg-plumage-300"></div>
+                <div class="flex items-center gap-2">
+                    <svg class="w-5 h-5 text-aviary-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/>
+                    </svg>
+                    <span>{{ i18n "trust_offline" | default "Works offline" }}</span>
+                </div>
+                <div class="hidden sm:block w-1 h-1 rounded-full bg-plumage-300"></div>
+                <div class="flex items-center gap-2">
+                    <svg class="w-5 h-5 text-aviary-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+                    </svg>
+                    <span>{{ i18n "trust_breeders" | default "Built for breeders" }}</span>
+                </div>
             </div>
         </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-float">
+        <a href="#features" class="flex flex-col items-center gap-2 text-plumage-400 hover:text-aviary-500 transition-colors">
+            <span class="text-xs font-accent uppercase tracking-wider">{{ i18n "scroll_explore" | default "Explore" }}</span>
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+            </svg>
+        </a>
     </div>
 </section>

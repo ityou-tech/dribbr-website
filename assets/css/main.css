@@ -2,51 +2,373 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Custom styles for Dribbr landing page */
-@layer components {
-  .btn-primary {
-    @apply px-6 py-3 bg-bird-blue-500 text-white font-semibold rounded-lg hover:bg-bird-blue-600 transition-colors duration-200 shadow-md hover:shadow-lg;
-  }
+/* Google Fonts Import - Distinctive Typography */
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400&family=Outfit:wght@300;400;500;600&family=DM+Sans:wght@400;500;600&display=swap');
 
-  .btn-secondary {
-    @apply px-6 py-3 bg-bird-green-500 text-white font-semibold rounded-lg hover:bg-bird-green-600 transition-colors duration-200 shadow-md hover:shadow-lg;
-  }
-
-  .btn-outline {
-    @apply px-6 py-3 border-2 border-bird-blue-500 text-bird-blue-500 font-semibold rounded-lg hover:bg-bird-blue-50 transition-colors duration-200;
-  }
-
-  .section-container {
-    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16;
-  }
-
-  .heading-xl {
-    @apply text-4xl sm:text-5xl lg:text-6xl font-bold text-sage-900 leading-tight;
-  }
-
-  .heading-lg {
-    @apply text-3xl sm:text-4xl font-bold text-sage-900;
-  }
-
-  .heading-md {
-    @apply text-2xl sm:text-3xl font-bold text-sage-900;
-  }
-
-  .card {
-    @apply bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow duration-300;
-  }
-
-  .feature-icon {
-    @apply w-12 h-12 flex items-center justify-center rounded-full text-2xl mb-4;
-  }
-}
-
+/* ═══════════════════════════════════════════════════════════════════════════
+   BASE LAYER - Foundation Styles
+   ═══════════════════════════════════════════════════════════════════════════ */
 @layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
-    @apply text-sage-800 bg-gradient-aviary;
+    @apply font-body text-plumage-800 antialiased;
+    background: linear-gradient(145deg, #faf9f7 0%, #f3f1ec 40%, #f0f7f4 100%);
+    min-height: 100vh;
+  }
+
+  /* Grain overlay for texture */
+  body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.03;
+    pointer-events: none;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    z-index: 1000;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply text-sage-900;
+    @apply font-display text-plumage-900;
+  }
+
+  /* Custom selection colors */
+  ::selection {
+    @apply bg-aviary-200 text-aviary-900;
+  }
+
+  /* Focus styles */
+  :focus-visible {
+    @apply outline-none ring-2 ring-aviary-500 ring-offset-2 ring-offset-plumage-50;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   COMPONENTS LAYER - Reusable UI Components
+   ═══════════════════════════════════════════════════════════════════════════ */
+@layer components {
+  /* ─────────────────────────────────────────────────────────────────────────
+     Buttons - Rich, tactile feel
+     ───────────────────────────────────────────────────────────────────────── */
+  .btn-primary {
+    @apply relative px-8 py-4 font-accent font-semibold text-white rounded-2xl
+           bg-gradient-to-br from-aviary-500 to-aviary-600
+           shadow-elevated hover:shadow-elevated-lg hover:shadow-glow-aviary
+           transform hover:-translate-y-0.5 active:translate-y-0
+           transition-all duration-300 ease-out
+           overflow-hidden;
+  }
+
+  .btn-primary::before {
+    content: '';
+    @apply absolute inset-0 bg-gradient-to-t from-transparent to-white/10 opacity-0
+           transition-opacity duration-300;
+  }
+
+  .btn-primary:hover::before {
+    @apply opacity-100;
+  }
+
+  .btn-secondary {
+    @apply relative px-8 py-4 font-accent font-semibold text-white rounded-2xl
+           bg-gradient-to-br from-feather-500 to-feather-600
+           shadow-elevated hover:shadow-elevated-lg hover:shadow-glow-feather
+           transform hover:-translate-y-0.5 active:translate-y-0
+           transition-all duration-300 ease-out;
+  }
+
+  .btn-outline {
+    @apply px-8 py-4 font-accent font-semibold rounded-2xl
+           border-2 border-aviary-500 text-aviary-600
+           bg-transparent hover:bg-aviary-50
+           transform hover:-translate-y-0.5 active:translate-y-0
+           transition-all duration-300 ease-out;
+  }
+
+  .btn-ghost {
+    @apply px-6 py-3 font-accent font-medium text-plumage-600 rounded-xl
+           hover:bg-plumage-100 hover:text-plumage-800
+           transition-all duration-200;
+  }
+
+  /* ─────────────────────────────────────────────────────────────────────────
+     Section Container
+     ───────────────────────────────────────────────────────────────────────── */
+  .section-container {
+    @apply max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-20 lg:py-28;
+  }
+
+  /* ─────────────────────────────────────────────────────────────────────────
+     Headings - Characterful Typography
+     ───────────────────────────────────────────────────────────────────────── */
+  .heading-xl {
+    @apply text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-display font-semibold
+           text-plumage-900 leading-[1.1] tracking-tight;
+  }
+
+  .heading-lg {
+    @apply text-3xl sm:text-4xl lg:text-5xl font-display font-semibold
+           text-plumage-900 leading-tight;
+  }
+
+  .heading-md {
+    @apply text-xl sm:text-2xl font-display font-semibold text-plumage-900;
+  }
+
+  .heading-sm {
+    @apply text-lg font-display font-medium text-plumage-800;
+  }
+
+  /* ─────────────────────────────────────────────────────────────────────────
+     Cards - Layered, dimensional
+     ───────────────────────────────────────────────────────────────────────── */
+  .card {
+    @apply relative bg-white/80 backdrop-blur-sm rounded-3xl p-8 lg:p-10
+           border border-plumage-200/50
+           shadow-elevated hover:shadow-elevated-lg
+           transform hover:-translate-y-1
+           transition-all duration-500 ease-out;
+  }
+
+  .card::before {
+    content: '';
+    @apply absolute inset-0 rounded-3xl opacity-0
+           bg-gradient-to-br from-aviary-50/50 to-feather-50/30
+           transition-opacity duration-500;
+    z-index: -1;
+  }
+
+  .card:hover::before {
+    @apply opacity-100;
+  }
+
+  .card-highlight {
+    @apply card border-aviary-200 bg-gradient-to-br from-white to-aviary-50/30;
+  }
+
+  /* ─────────────────────────────────────────────────────────────────────────
+     Feature Icons - Organic, distinctive
+     ───────────────────────────────────────────────────────────────────────── */
+  .feature-icon {
+    @apply w-16 h-16 flex items-center justify-center rounded-2xl mb-6
+           transform transition-transform duration-500;
+  }
+
+  .feature-icon-aviary {
+    @apply bg-gradient-to-br from-aviary-100 to-aviary-200/50 text-aviary-600;
+  }
+
+  .feature-icon-feather {
+    @apply bg-gradient-to-br from-feather-100 to-feather-200/50 text-feather-600;
+  }
+
+  .feature-icon-wingspan {
+    @apply bg-gradient-to-br from-wingspan-100 to-wingspan-200/50 text-wingspan-600;
+  }
+
+  .feature-icon-nest {
+    @apply bg-gradient-to-br from-nest-100 to-nest-200/50 text-nest-600;
+  }
+
+  .card:hover .feature-icon {
+    @apply scale-110 rotate-3;
+  }
+
+  /* ─────────────────────────────────────────────────────────────────────────
+     Badges & Labels
+     ───────────────────────────────────────────────────────────────────────── */
+  .badge {
+    @apply inline-flex items-center gap-2 px-4 py-2 rounded-full
+           font-accent text-sm font-medium;
+  }
+
+  .badge-aviary {
+    @apply bg-aviary-100 text-aviary-700 border border-aviary-200;
+  }
+
+  .badge-feather {
+    @apply bg-feather-100 text-feather-700 border border-feather-200;
+  }
+
+  .badge-wingspan {
+    @apply bg-wingspan-100 text-wingspan-700 border border-wingspan-200;
+  }
+
+  .badge-plumage {
+    @apply bg-plumage-100 text-plumage-700 border border-plumage-200;
+  }
+
+  /* ─────────────────────────────────────────────────────────────────────────
+     Form Inputs - Refined, elegant
+     ───────────────────────────────────────────────────────────────────────── */
+  .input {
+    @apply w-full px-5 py-4 font-body text-plumage-900
+           bg-white border-2 border-plumage-200 rounded-xl
+           placeholder:text-plumage-400
+           focus:outline-none focus:border-aviary-400 focus:ring-4 focus:ring-aviary-100
+           transition-all duration-200;
+  }
+
+  .input-dark {
+    @apply w-full px-5 py-4 font-body text-plumage-900
+           bg-white/95 backdrop-blur-sm border-2 border-white/20 rounded-xl
+           placeholder:text-plumage-400
+           focus:outline-none focus:border-feather-400 focus:ring-4 focus:ring-feather-100/50
+           transition-all duration-200;
+  }
+
+  .select {
+    @apply input appearance-none cursor-pointer
+           bg-[url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%239a9080%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpolyline%20points%3D%226%209%2012%2015%2018%209%22%3E%3C%2Fpolyline%3E%3C%2Fsvg%3E')]
+           bg-no-repeat bg-[right_1rem_center] bg-[length:1.25rem];
+  }
+
+  .textarea {
+    @apply input resize-none;
+  }
+
+  .label {
+    @apply block font-accent text-sm font-medium text-plumage-700 mb-2;
+  }
+
+  /* ─────────────────────────────────────────────────────────────────────────
+     Decorative Elements
+     ───────────────────────────────────────────────────────────────────────── */
+  .decorative-line {
+    @apply h-1 w-20 rounded-full bg-gradient-to-r from-aviary-400 to-feather-400;
+  }
+
+  .decorative-dot {
+    @apply w-2 h-2 rounded-full bg-aviary-400;
+  }
+
+  /* Floating decorative shapes */
+  .float-shape {
+    @apply absolute pointer-events-none opacity-20;
+  }
+
+  .float-shape-1 {
+    @apply w-64 h-64 rounded-full bg-gradient-to-br from-aviary-300 to-transparent
+           blur-3xl animate-float;
+  }
+
+  .float-shape-2 {
+    @apply w-48 h-48 rounded-full bg-gradient-to-br from-feather-300 to-transparent
+           blur-3xl animate-float-delayed;
+  }
+
+  .float-shape-3 {
+    @apply w-56 h-56 rounded-full bg-gradient-to-br from-wingspan-300 to-transparent
+           blur-3xl animate-float-slow;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   UTILITIES LAYER - Animation & Effect Utilities
+   ═══════════════════════════════════════════════════════════════════════════ */
+@layer utilities {
+  /* Staggered animation delays for orchestrated reveals */
+  .delay-100 { animation-delay: 100ms; }
+  .delay-200 { animation-delay: 200ms; }
+  .delay-300 { animation-delay: 300ms; }
+  .delay-400 { animation-delay: 400ms; }
+  .delay-500 { animation-delay: 500ms; }
+  .delay-600 { animation-delay: 600ms; }
+  .delay-700 { animation-delay: 700ms; }
+  .delay-800 { animation-delay: 800ms; }
+
+  /* Initial state for animations */
+  .animate-on-scroll {
+    opacity: 0;
+  }
+
+  .animate-on-scroll.visible {
+    @apply animate-fade-up;
+  }
+
+  /* Text gradient effect */
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-aviary-600 to-wingspan-600;
+  }
+
+  .text-gradient-warm {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-feather-500 to-nest-500;
+  }
+
+  /* Hover lift effect */
+  .hover-lift {
+    @apply transform transition-transform duration-300 hover:-translate-y-1;
+  }
+
+  /* Subtle pulse on hover */
+  .hover-pulse:hover {
+    animation: pulseSoft 1s ease-in-out;
+  }
+
+  /* Glass morphism */
+  .glass {
+    @apply bg-white/70 backdrop-blur-md border border-white/20;
+  }
+
+  .glass-dark {
+    @apply bg-plumage-900/80 backdrop-blur-md border border-plumage-700/30;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   CUSTOM STYLES - Specific Components
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+/* Smooth scrollbar styling */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-plumage-100;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-plumage-400 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-plumage-500;
+}
+
+/* Timeline connector for roadmap */
+.timeline-connector {
+  @apply absolute left-6 top-12 bottom-0 w-0.5 bg-gradient-to-b from-aviary-300 to-plumage-200;
+}
+
+/* Feather decoration SVG background */
+.feather-bg {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Cpath d='M30 5c-2 8-8 15-15 18 7-3 15-3 22 0-7-3-13-10-15-18h8z' fill='%233a8568' fill-opacity='0.03'/%3E%3C/svg%3E");
+}
+
+/* Responsive typography adjustments */
+@media (max-width: 640px) {
+  .heading-xl {
+    @apply text-3xl;
+  }
+
+  .heading-lg {
+    @apply text-2xl;
+  }
+}
+
+/* Print styles */
+@media print {
+  body::before {
+    display: none;
+  }
+
+  .card {
+    @apply shadow-none border border-plumage-300;
   }
 }

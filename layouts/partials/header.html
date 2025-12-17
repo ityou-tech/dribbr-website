@@ -1,32 +1,62 @@
-<header class="bg-white/90 backdrop-blur-sm shadow-sm sticky top-0 z-50">
-    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-        <div class="flex items-center justify-between">
-            <!-- Logo -->
-            <div class="flex items-center">
-                <a href="{{ "/" | relLangURL }}" class="flex items-center space-x-2 hover:opacity-80 transition-opacity">
-                    <img src="/images/logo.png" alt="Dribbr" class="h-8">
-                    <span class="text-xl font-bold">
-                        <span class="text-bird-green-500">Drib</span><span class="text-bird-blue-500">br</span>
-                    </span>
-                </a>
-            </div>
-
-            <!-- Language Switcher -->
-            <div class="flex items-center space-x-2">
-                {{ range .Site.Home.AllTranslations }}
-                    {{ if eq .Language $.Site.Language }}
-                        <span class="px-3 py-2 bg-bird-blue-500 text-white rounded-md font-medium text-sm">
-                            {{ .Language.LanguageName }}
+<header class="fixed top-0 left-0 right-0 z-50">
+    <div class="mx-4 mt-4">
+        <nav class="max-w-7xl mx-auto px-6 py-4 bg-white/80 backdrop-blur-md rounded-2xl border border-plumage-200/50 shadow-elevated">
+            <div class="flex items-center justify-between">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <a href="{{ "/" | relLangURL }}" class="flex items-center gap-3 group">
+                        <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-aviary-500 to-aviary-600 flex items-center justify-center shadow-md group-hover:shadow-glow-aviary transition-shadow duration-300">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/>
+                            </svg>
+                        </div>
+                        <span class="text-xl font-display font-semibold">
+                            <span class="text-aviary-600">Drib</span><span class="text-feather-500">br</span>
                         </span>
-                    {{ else }}
-                        <a href="{{ .RelPermalink }}"
-                           hreflang="{{ .Language.Lang }}"
-                           class="px-3 py-2 text-sage-700 hover:bg-sage-100 rounded-md font-medium text-sm transition-colors">
-                            {{ .Language.LanguageName }}
-                        </a>
-                    {{ end }}
-                {{ end }}
+                    </a>
+                </div>
+
+                <!-- Navigation links (hidden on mobile) -->
+                <div class="hidden md:flex items-center gap-1">
+                    <a href="#features" class="btn-ghost text-sm">
+                        {{ i18n "nav_features" | default "Features" }}
+                    </a>
+                    <a href="#roadmap" class="btn-ghost text-sm">
+                        {{ i18n "nav_roadmap" | default "Roadmap" }}
+                    </a>
+                    <a href="#feature-request" class="btn-ghost text-sm">
+                        {{ i18n "nav_ideas" | default "Ideas" }}
+                    </a>
+                </div>
+
+                <!-- Right side: Language Switcher + CTA -->
+                <div class="flex items-center gap-4">
+                    <!-- Language Switcher -->
+                    <div class="flex items-center gap-1 p-1 bg-plumage-100 rounded-lg">
+                        {{ range .Site.Home.AllTranslations }}
+                            {{ if eq .Language $.Site.Language }}
+                                <span class="px-3 py-1.5 bg-white text-plumage-900 rounded-md font-accent font-medium text-sm shadow-sm">
+                                    {{ .Language.Lang | upper }}
+                                </span>
+                            {{ else }}
+                                <a href="{{ .RelPermalink }}"
+                                   hreflang="{{ .Language.Lang }}"
+                                   class="px-3 py-1.5 text-plumage-500 hover:text-plumage-700 rounded-md font-accent font-medium text-sm transition-colors">
+                                    {{ .Language.Lang | upper }}
+                                </a>
+                            {{ end }}
+                        {{ end }}
+                    </div>
+
+                    <!-- CTA Button (hidden on small mobile) -->
+                    <a href="#beta-signup" class="hidden sm:inline-flex btn-primary text-sm py-2.5 px-5">
+                        {{ i18n "nav_join_beta" | default "Join Beta" }}
+                    </a>
+                </div>
             </div>
-        </div>
-    </nav>
+        </nav>
+    </div>
 </header>
+
+<!-- Spacer for fixed header -->
+<div class="h-24"></div>

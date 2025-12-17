@@ -1,114 +1,147 @@
-<section id="roadmap" class="section-container">
-    <div class="text-center mb-16">
-        <h2 class="heading-lg mb-4">
-            {{ i18n "roadmap_title" | default "Our Journey" }}
+<section id="roadmap" class="section-container relative overflow-hidden">
+    <!-- Background decoration -->
+    <div class="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-aviary-100/50 to-transparent rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
+
+    <!-- Section header -->
+    <div class="text-center mb-20 relative">
+        <span class="badge badge-wingspan mb-6 inline-flex">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"/>
+            </svg>
+            {{ i18n "roadmap_badge" | default "Our Journey" }}
+        </span>
+        <h2 class="heading-lg mb-6">
+            {{ i18n "roadmap_title" | default "Building the future" }}
         </h2>
-        <p class="text-xl text-sage-600 max-w-2xl mx-auto">
+        <p class="text-xl text-plumage-600 max-w-2xl mx-auto leading-relaxed">
             {{ i18n "roadmap_subtitle" | default "Building the future of bird breeding management" }}
         </p>
     </div>
 
-    <div class="max-w-4xl mx-auto">
-        <!-- Roadmap Timeline -->
-        <div class="space-y-8">
-            <!-- Phase 1: Beta -->
-            <div class="flex gap-6">
-                <div class="flex flex-col items-center">
-                    <div class="w-12 h-12 rounded-full bg-bird-green-500 text-white flex items-center justify-center font-bold text-lg shadow-lg">
+    <div class="max-w-4xl mx-auto relative">
+        <!-- Timeline line -->
+        <div class="absolute left-8 lg:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-aviary-400 via-feather-400 to-plumage-200 lg:-translate-x-px"></div>
+
+        <!-- Phase 1: Beta - Current -->
+        <div class="relative flex flex-col lg:flex-row items-start lg:items-center gap-8 mb-16">
+            <!-- Timeline node -->
+            <div class="absolute left-8 lg:left-1/2 -translate-x-1/2 z-10">
+                <div class="relative">
+                    <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-aviary-500 to-aviary-600 shadow-glow-aviary flex items-center justify-center text-white font-display font-bold text-xl">
                         1
                     </div>
-                    <div class="flex-1 w-1 bg-bird-green-200 mt-2"></div>
-                </div>
-                <div class="flex-1 pb-8">
-                    <div class="card">
-                        <div class="flex items-center justify-between mb-2">
-                            <h3 class="text-xl font-bold text-sage-900">
-                                {{ i18n "roadmap_phase1_title" | default "Beta Testing" }}
-                            </h3>
-                            <span class="px-3 py-1 bg-bird-green-100 text-bird-green-700 rounded-full text-sm font-medium">
-                                {{ i18n "status_current" | default "Current" }}
-                            </span>
-                        </div>
-                        <p class="text-sage-600">
-                            {{ i18n "roadmap_phase1_description" | default "Android beta with core features: bird management, breeding tracking, and visual cage interface. Limited to beta testers." }}
-                        </p>
-                    </div>
+                    <div class="absolute -top-1 -right-1 w-4 h-4 rounded-full bg-aviary-400 animate-pulse-soft"></div>
                 </div>
             </div>
 
-            <!-- Phase 2: Android Launch -->
-            <div class="flex gap-6">
-                <div class="flex flex-col items-center">
-                    <div class="w-12 h-12 rounded-full bg-bird-blue-500 text-white flex items-center justify-center font-bold text-lg shadow-lg">
-                        2
+            <!-- Content - Left side on desktop -->
+            <div class="lg:w-1/2 lg:pr-16 lg:text-right pl-24 lg:pl-0">
+                <div class="card card-highlight">
+                    <div class="flex items-center gap-3 mb-4 lg:justify-end">
+                        <span class="badge badge-aviary text-xs">
+                            <span class="w-2 h-2 rounded-full bg-aviary-500 animate-pulse"></span>
+                            {{ i18n "status_current" | default "Current" }}
+                        </span>
                     </div>
-                    <div class="flex-1 w-1 bg-bird-blue-200 mt-2"></div>
+                    <h3 class="heading-md mb-3">
+                        {{ i18n "roadmap_phase1_title" | default "Beta Testing" }}
+                    </h3>
+                    <p class="text-plumage-600 leading-relaxed">
+                        {{ i18n "roadmap_phase1_description" | default "Android beta with core features: bird management, breeding tracking, and visual cage interface. Limited to beta testers." }}
+                    </p>
                 </div>
-                <div class="flex-1 pb-8">
-                    <div class="card">
-                        <div class="flex items-center justify-between mb-2">
-                            <h3 class="text-xl font-bold text-sage-900">
-                                {{ i18n "roadmap_phase2_title" | default "Android Release" }}
-                            </h3>
-                            <span class="px-3 py-1 bg-bird-blue-100 text-bird-blue-700 rounded-full text-sm font-medium">
-                                {{ i18n "status_upcoming" | default "Upcoming" }}
-                            </span>
-                        </div>
-                        <p class="text-sage-600">
-                            {{ i18n "roadmap_phase2_description" | default "Full public release on Google Play Store with refined features based on beta feedback and enhanced performance." }}
-                        </p>
-                    </div>
+            </div>
+            <div class="hidden lg:block lg:w-1/2"></div>
+        </div>
+
+        <!-- Phase 2: Android Launch -->
+        <div class="relative flex flex-col lg:flex-row-reverse items-start lg:items-center gap-8 mb-16">
+            <!-- Timeline node -->
+            <div class="absolute left-8 lg:left-1/2 -translate-x-1/2 z-10">
+                <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-feather-500 to-feather-600 shadow-elevated flex items-center justify-center text-white font-display font-bold text-xl">
+                    2
                 </div>
             </div>
 
-            <!-- Phase 3: iOS Launch -->
-            <div class="flex gap-6">
-                <div class="flex flex-col items-center">
-                    <div class="w-12 h-12 rounded-full bg-bird-orange-500 text-white flex items-center justify-center font-bold text-lg shadow-lg">
-                        3
+            <!-- Content - Right side on desktop -->
+            <div class="lg:w-1/2 lg:pl-16 pl-24 lg:pl-16">
+                <div class="card">
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="badge badge-feather text-xs">
+                            {{ i18n "status_upcoming" | default "Upcoming" }}
+                        </span>
                     </div>
-                    <div class="flex-1 w-1 bg-bird-orange-200 mt-2"></div>
+                    <h3 class="heading-md mb-3">
+                        {{ i18n "roadmap_phase2_title" | default "Android Release" }}
+                    </h3>
+                    <p class="text-plumage-600 leading-relaxed">
+                        {{ i18n "roadmap_phase2_description" | default "Full public release on Google Play Store with refined features based on beta feedback and enhanced performance." }}
+                    </p>
                 </div>
-                <div class="flex-1 pb-8">
-                    <div class="card">
-                        <div class="flex items-center justify-between mb-2">
-                            <h3 class="text-xl font-bold text-sage-900">
-                                {{ i18n "roadmap_phase3_title" | default "iOS Release" }}
-                            </h3>
-                            <span class="px-3 py-1 bg-sage-100 text-sage-700 rounded-full text-sm font-medium">
-                                {{ i18n "status_planned" | default "Planned" }}
-                            </span>
-                        </div>
-                        <p class="text-sage-600">
-                            {{ i18n "roadmap_phase3_description" | default "Launch on Apple App Store, bringing Dribbr to iOS users with platform-specific optimizations." }}
-                        </p>
-                    </div>
+            </div>
+            <div class="hidden lg:block lg:w-1/2"></div>
+        </div>
+
+        <!-- Phase 3: iOS Launch -->
+        <div class="relative flex flex-col lg:flex-row items-start lg:items-center gap-8 mb-16">
+            <!-- Timeline node -->
+            <div class="absolute left-8 lg:left-1/2 -translate-x-1/2 z-10">
+                <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-wingspan-500 to-wingspan-600 shadow-elevated flex items-center justify-center text-white font-display font-bold text-xl">
+                    3
                 </div>
             </div>
 
-            <!-- Phase 4: Advanced Features -->
-            <div class="flex gap-6">
-                <div class="flex flex-col items-center">
-                    <div class="w-12 h-12 rounded-full bg-bird-yellow-500 text-white flex items-center justify-center font-bold text-lg shadow-lg">
-                        4
+            <!-- Content - Left side on desktop -->
+            <div class="lg:w-1/2 lg:pr-16 lg:text-right pl-24 lg:pl-0">
+                <div class="card">
+                    <div class="flex items-center gap-3 mb-4 lg:justify-end">
+                        <span class="badge badge-plumage text-xs">
+                            {{ i18n "status_planned" | default "Planned" }}
+                        </span>
                     </div>
+                    <h3 class="heading-md mb-3">
+                        {{ i18n "roadmap_phase3_title" | default "iOS Release" }}
+                    </h3>
+                    <p class="text-plumage-600 leading-relaxed">
+                        {{ i18n "roadmap_phase3_description" | default "Launch on Apple App Store, bringing Dribbr to iOS users with platform-specific optimizations." }}
+                    </p>
                 </div>
-                <div class="flex-1">
-                    <div class="card">
-                        <div class="flex items-center justify-between mb-2">
-                            <h3 class="text-xl font-bold text-sage-900">
-                                {{ i18n "roadmap_phase4_title" | default "Advanced Features" }}
-                            </h3>
-                            <span class="px-3 py-1 bg-sage-100 text-sage-700 rounded-full text-sm font-medium">
-                                {{ i18n "status_planned" | default "Planned" }}
-                            </span>
-                        </div>
-                        <p class="text-sage-600">
-                            {{ i18n "roadmap_phase4_description" | default "Cloud sync, advanced genetics calculator, community features, and integration with avian databases." }}
-                        </p>
+            </div>
+            <div class="hidden lg:block lg:w-1/2"></div>
+        </div>
+
+        <!-- Phase 4: Advanced Features -->
+        <div class="relative flex flex-col lg:flex-row-reverse items-start lg:items-center gap-8">
+            <!-- Timeline node -->
+            <div class="absolute left-8 lg:left-1/2 -translate-x-1/2 z-10">
+                <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-nest-500 to-nest-600 shadow-elevated flex items-center justify-center text-white font-display font-bold text-xl">
+                    4
+                </div>
+            </div>
+
+            <!-- Content - Right side on desktop -->
+            <div class="lg:w-1/2 lg:pl-16 pl-24 lg:pl-16">
+                <div class="card">
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="badge badge-plumage text-xs">
+                            {{ i18n "status_planned" | default "Planned" }}
+                        </span>
+                    </div>
+                    <h3 class="heading-md mb-3">
+                        {{ i18n "roadmap_phase4_title" | default "Advanced Features" }}
+                    </h3>
+                    <p class="text-plumage-600 leading-relaxed">
+                        {{ i18n "roadmap_phase4_description" | default "Cloud sync, advanced genetics calculator, community features, and integration with avian databases." }}
+                    </p>
+                    <!-- Future features preview -->
+                    <div class="mt-6 flex flex-wrap gap-2">
+                        <span class="text-xs font-accent text-plumage-400 bg-plumage-50 px-3 py-1 rounded-full border border-plumage-100">{{ i18n "future_cloud" | default "Cloud Sync" }}</span>
+                        <span class="text-xs font-accent text-plumage-400 bg-plumage-50 px-3 py-1 rounded-full border border-plumage-100">{{ i18n "future_genetics" | default "Genetics Calculator" }}</span>
+                        <span class="text-xs font-accent text-plumage-400 bg-plumage-50 px-3 py-1 rounded-full border border-plumage-100">{{ i18n "future_community" | default "Community" }}</span>
                     </div>
                 </div>
             </div>
+            <div class="hidden lg:block lg:w-1/2"></div>
         </div>
     </div>
 </section>

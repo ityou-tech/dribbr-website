@@ -1,73 +1,125 @@
-<section id="beta-signup" class="section-container bg-gradient-to-br from-bird-blue-500 to-bird-blue-600 text-white">
-    <div class="max-w-3xl mx-auto text-center">
-        <h2 class="text-4xl font-bold mb-4">
-            {{ i18n "beta_title" | default "Join the Beta Program" }}
-        </h2>
-        <p class="text-xl mb-8 text-bird-blue-50">
-            {{ i18n "beta_subtitle" | default "Be among the first to experience Dribbr. Get early access and help shape the future of bird breeding management." }}
-        </p>
+<section id="beta-signup" class="relative overflow-hidden">
+    <!-- Rich gradient background -->
+    <div class="absolute inset-0 bg-gradient-to-br from-aviary-700 via-aviary-600 to-aviary-800"></div>
 
-        <!-- Netlify Form -->
-        <form name="beta-signup" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="max-w-md mx-auto">
-            <!-- Hidden fields for Netlify -->
-            <input type="hidden" name="form-name" value="beta-signup">
-            <p class="hidden">
-                <label>Don't fill this out if you're human: <input name="bot-field"></label>
-            </p>
-            <input type="hidden" name="language" value="{{ .Site.Language.Lang }}">
+    <!-- Decorative elements -->
+    <div class="absolute top-0 left-0 w-full h-full">
+        <div class="absolute top-10 left-10 w-64 h-64 bg-aviary-500/20 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-10 right-10 w-80 h-80 bg-feather-500/10 rounded-full blur-3xl"></div>
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-aviary-400/10 rounded-full blur-3xl"></div>
+    </div>
 
-            <div class="space-y-4">
-                <!-- Name -->
-                <div>
-                    <label for="beta-name" class="sr-only">{{ i18n "form_name" | default "Name" }}</label>
-                    <input
-                        type="text"
-                        id="beta-name"
-                        name="name"
-                        required
-                        placeholder="{{ i18n "form_name_placeholder" | default "Your Name" }}"
-                        class="w-full px-4 py-3 rounded-lg text-sage-900 placeholder-sage-400 focus:outline-none focus:ring-2 focus:ring-bird-yellow-500"
-                    >
-                </div>
+    <!-- Subtle pattern -->
+    <div class="absolute inset-0 feather-bg opacity-5"></div>
 
-                <!-- Email -->
-                <div>
-                    <label for="beta-email" class="sr-only">{{ i18n "form_email" | default "Email" }}</label>
-                    <input
-                        type="email"
-                        id="beta-email"
-                        name="email"
-                        required
-                        placeholder="{{ i18n "form_email_placeholder" | default "your@email.com" }}"
-                        class="w-full px-4 py-3 rounded-lg text-sage-900 placeholder-sage-400 focus:outline-none focus:ring-2 focus:ring-bird-yellow-500"
-                    >
-                </div>
-
-                <!-- Experience Level (Optional) -->
-                <div>
-                    <label for="beta-experience" class="sr-only">{{ i18n "form_experience" | default "Breeding Experience" }}</label>
-                    <select
-                        id="beta-experience"
-                        name="experience"
-                        class="w-full px-4 py-3 rounded-lg text-sage-900 focus:outline-none focus:ring-2 focus:ring-bird-yellow-500"
-                    >
-                        <option value="">{{ i18n "form_experience_placeholder" | default "Breeding experience (optional)" }}</option>
-                        <option value="beginner">{{ i18n "form_experience_beginner" | default "Beginner (less than 1 year)" }}</option>
-                        <option value="intermediate">{{ i18n "form_experience_intermediate" | default "Intermediate (1-5 years)" }}</option>
-                        <option value="advanced">{{ i18n "form_experience_advanced" | default "Advanced (5+ years)" }}</option>
-                        <option value="professional">{{ i18n "form_experience_professional" | default "Professional breeder" }}</option>
-                    </select>
-                </div>
-
-                <!-- Submit Button -->
-                <button type="submit" class="w-full px-6 py-3 bg-bird-yellow-500 text-sage-900 font-bold rounded-lg hover:bg-bird-yellow-400 transition-colors duration-200 shadow-lg hover:shadow-xl">
-                    {{ i18n "form_submit_beta" | default "Request Beta Access" }}
-                </button>
+    <div class="section-container relative z-10">
+        <div class="max-w-3xl mx-auto text-center">
+            <!-- Section badge -->
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white/90 text-sm font-accent mb-8">
+                <svg class="w-4 h-4 text-feather-400" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M5 2a1 1 0 011 1v1h1a1 1 0 010 2H6v1a1 1 0 01-2 0V6H3a1 1 0 010-2h1V3a1 1 0 011-1zm0 10a1 1 0 011 1v1h1a1 1 0 110 2H6v1a1 1 0 11-2 0v-1H3a1 1 0 110-2h1v-1a1 1 0 011-1zM12 2a1 1 0 01.967.744L14.146 7.2 17.5 9.134a1 1 0 010 1.732l-3.354 1.935-1.18 4.455a1 1 0 01-1.933 0L9.854 12.8 6.5 10.866a1 1 0 010-1.732l3.354-1.935 1.18-4.455A1 1 0 0112 2z" clip-rule="evenodd"/>
+                </svg>
+                {{ i18n "beta_badge" | default "Limited Spots Available" }}
             </div>
-        </form>
 
-        <p class="mt-6 text-sm text-bird-blue-100">
-            {{ i18n "beta_disclaimer" | default "We'll contact you when beta slots are available. Your data is safe with us." }}
-        </p>
+            <h2 class="text-4xl sm:text-5xl font-display font-semibold text-white mb-6">
+                {{ i18n "beta_title" | default "Join the Beta Program" }}
+            </h2>
+            <p class="text-xl text-aviary-100 mb-12 leading-relaxed">
+                {{ i18n "beta_subtitle" | default "Be among the first to experience Dribbr. Get early access and help shape the future of bird breeding management." }}
+            </p>
+
+            <!-- Netlify Form -->
+            <form name="beta-signup" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="max-w-lg mx-auto">
+                <!-- Hidden fields for Netlify -->
+                <input type="hidden" name="form-name" value="beta-signup">
+                <p class="hidden">
+                    <label>Don't fill this out if you're human: <input name="bot-field"></label>
+                </p>
+                <input type="hidden" name="language" value="{{ .Site.Language.Lang }}">
+
+                <div class="space-y-4">
+                    <!-- Name -->
+                    <div>
+                        <label for="beta-name" class="sr-only">{{ i18n "form_name" | default "Name" }}</label>
+                        <input
+                            type="text"
+                            id="beta-name"
+                            name="name"
+                            required
+                            placeholder="{{ i18n "form_name_placeholder" | default "Your Name" }}"
+                            class="input-dark"
+                        >
+                    </div>
+
+                    <!-- Email -->
+                    <div>
+                        <label for="beta-email" class="sr-only">{{ i18n "form_email" | default "Email" }}</label>
+                        <input
+                            type="email"
+                            id="beta-email"
+                            name="email"
+                            required
+                            placeholder="{{ i18n "form_email_placeholder" | default "your@email.com" }}"
+                            class="input-dark"
+                        >
+                    </div>
+
+                    <!-- Experience Level (Optional) -->
+                    <div>
+                        <label for="beta-experience" class="sr-only">{{ i18n "form_experience" | default "Breeding Experience" }}</label>
+                        <select
+                            id="beta-experience"
+                            name="experience"
+                            class="input-dark appearance-none cursor-pointer bg-[url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%239a9080%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpolyline%20points%3D%226%209%2012%2015%2018%209%22%3E%3C%2Fpolyline%3E%3C%2Fsvg%3E')] bg-no-repeat bg-[right_1rem_center] bg-[length:1.25rem]"
+                        >
+                            <option value="">{{ i18n "form_experience_placeholder" | default "Breeding experience (optional)" }}</option>
+                            <option value="beginner">{{ i18n "form_experience_beginner" | default "Beginner (less than 1 year)" }}</option>
+                            <option value="intermediate">{{ i18n "form_experience_intermediate" | default "Intermediate (1-5 years)" }}</option>
+                            <option value="advanced">{{ i18n "form_experience_advanced" | default "Advanced (5+ years)" }}</option>
+                            <option value="professional">{{ i18n "form_experience_professional" | default "Professional breeder" }}</option>
+                        </select>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button type="submit" class="w-full px-8 py-4 bg-gradient-to-r from-feather-500 to-feather-400 text-plumage-900 font-accent font-bold rounded-xl hover:from-feather-400 hover:to-feather-300 transform hover:-translate-y-0.5 transition-all duration-300 shadow-elevated hover:shadow-glow-feather group">
+                        <span class="flex items-center justify-center gap-2">
+                            {{ i18n "form_submit_beta" | default "Request Beta Access" }}
+                            <svg class="w-5 h-5 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                            </svg>
+                        </span>
+                    </button>
+                </div>
+            </form>
+
+            <p class="mt-8 text-sm text-aviary-200">
+                {{ i18n "beta_disclaimer" | default "We'll contact you when beta slots are available. Your data is safe with us." }}
+            </p>
+
+            <!-- Trust indicators -->
+            <div class="mt-10 flex items-center justify-center gap-6 text-aviary-200 text-sm">
+                <div class="flex items-center gap-2">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+                    </svg>
+                    {{ i18n "trust_secure" | default "Secure" }}
+                </div>
+                <div class="w-1 h-1 rounded-full bg-aviary-400"></div>
+                <div class="flex items-center gap-2">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636"/>
+                    </svg>
+                    {{ i18n "trust_no_spam" | default "No Spam" }}
+                </div>
+                <div class="w-1 h-1 rounded-full bg-aviary-400"></div>
+                <div class="flex items-center gap-2">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                    {{ i18n "trust_free" | default "Free Beta" }}
+                </div>
+            </div>
+        </div>
     </div>
 </section>

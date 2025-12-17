@@ -1,72 +1,112 @@
-<footer class="bg-sage-900 text-white py-12">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid md:grid-cols-3 gap-8">
-            <!-- Brand Column -->
-            <div>
-                <h3 class="text-2xl font-bold text-bird-blue-400 mb-4">
-                    {{ i18n "site_name" | default "Dribbr" }}
-                </h3>
-                <p class="text-sage-300 text-sm">
-                    {{ i18n "footer_tagline" | default "Smart tools for passionate bird breeders. Breeding, reimagined." }}
-                </p>
-            </div>
+<footer class="relative overflow-hidden">
+    <!-- Background -->
+    <div class="absolute inset-0 bg-gradient-to-b from-plumage-900 to-plumage-950"></div>
 
-            <!-- Quick Links Column -->
-            <div>
-                <h4 class="font-semibold mb-4 text-sage-100">
-                    {{ i18n "footer_quick_links" | default "Quick Links" }}
-                </h4>
-                <ul class="space-y-2 text-sm">
-                    <li>
-                        <a href="#features" class="text-sage-300 hover:text-bird-blue-400 transition-colors">
-                            {{ i18n "nav_features" | default "Features" }}
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#roadmap" class="text-sage-300 hover:text-bird-blue-400 transition-colors">
-                            {{ i18n "nav_roadmap" | default "Roadmap" }}
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#beta-signup" class="text-sage-300 hover:text-bird-blue-400 transition-colors">
-                            {{ i18n "nav_beta" | default "Join Beta" }}
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#feature-request" class="text-sage-300 hover:text-bird-blue-400 transition-colors">
-                            {{ i18n "nav_feature_request" | default "Request Features" }}
-                        </a>
-                    </li>
-                </ul>
-            </div>
+    <!-- Decorative elements -->
+    <div class="absolute top-0 left-1/4 w-64 h-64 bg-aviary-600/10 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-0 right-1/4 w-80 h-80 bg-feather-600/5 rounded-full blur-3xl"></div>
 
-            <!-- Language Column -->
-            <div>
-                <h4 class="font-semibold mb-4 text-sage-100">
-                    {{ i18n "footer_language" | default "Language" }}
-                </h4>
-                <ul class="space-y-2 text-sm">
-                    {{ range .Site.Home.AllTranslations }}
+    <!-- Top border gradient -->
+    <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-aviary-500/50 to-transparent"></div>
+
+    <div class="relative z-10">
+        <!-- Main footer content -->
+        <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 pt-16 pb-12">
+            <div class="grid md:grid-cols-4 gap-12 lg:gap-16">
+                <!-- Brand Column -->
+                <div class="md:col-span-2">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-aviary-500 to-aviary-600 flex items-center justify-center shadow-lg">
+                            <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/>
+                            </svg>
+                        </div>
+                        <span class="text-2xl font-display font-semibold">
+                            <span class="text-aviary-400">Drib</span><span class="text-feather-400">br</span>
+                        </span>
+                    </div>
+                    <p class="text-plumage-400 max-w-sm leading-relaxed mb-6">
+                        {{ i18n "footer_tagline" | default "Smart tools for passionate bird breeders. Breeding, reimagined." }}
+                    </p>
+                    <p class="text-sm text-plumage-500 italic">
+                        {{ i18n "footer_bird_name" | default "The first 4 letters are \"bird\" in reverse, ending with \"br\" for breeder." }}
+                    </p>
+                </div>
+
+                <!-- Quick Links Column -->
+                <div>
+                    <h4 class="font-display font-semibold text-plumage-100 mb-6">
+                        {{ i18n "footer_quick_links" | default "Quick Links" }}
+                    </h4>
+                    <ul class="space-y-3">
                         <li>
-                            <a href="{{ .RelPermalink }}"
-                               hreflang="{{ .Language.Lang }}"
-                               class="text-sage-300 hover:text-bird-blue-400 transition-colors {{ if eq .Language $.Site.Language }}font-semibold text-bird-blue-400{{ end }}">
-                                {{ .Language.LanguageName }}
+                            <a href="#features" class="text-plumage-400 hover:text-aviary-400 transition-colors duration-200 flex items-center gap-2 group">
+                                <span class="w-1 h-1 rounded-full bg-plumage-600 group-hover:bg-aviary-400 transition-colors"></span>
+                                {{ i18n "nav_features" | default "Features" }}
                             </a>
                         </li>
-                    {{ end }}
-                </ul>
+                        <li>
+                            <a href="#roadmap" class="text-plumage-400 hover:text-aviary-400 transition-colors duration-200 flex items-center gap-2 group">
+                                <span class="w-1 h-1 rounded-full bg-plumage-600 group-hover:bg-aviary-400 transition-colors"></span>
+                                {{ i18n "nav_roadmap" | default "Roadmap" }}
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#beta-signup" class="text-plumage-400 hover:text-aviary-400 transition-colors duration-200 flex items-center gap-2 group">
+                                <span class="w-1 h-1 rounded-full bg-plumage-600 group-hover:bg-aviary-400 transition-colors"></span>
+                                {{ i18n "nav_beta" | default "Join Beta" }}
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#feature-request" class="text-plumage-400 hover:text-aviary-400 transition-colors duration-200 flex items-center gap-2 group">
+                                <span class="w-1 h-1 rounded-full bg-plumage-600 group-hover:bg-aviary-400 transition-colors"></span>
+                                {{ i18n "nav_feature_request" | default "Request Features" }}
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Language Column -->
+                <div>
+                    <h4 class="font-display font-semibold text-plumage-100 mb-6">
+                        {{ i18n "footer_language" | default "Language" }}
+                    </h4>
+                    <ul class="space-y-3">
+                        {{ range .Site.Home.AllTranslations }}
+                            <li>
+                                <a href="{{ .RelPermalink }}"
+                                   hreflang="{{ .Language.Lang }}"
+                                   class="text-plumage-400 hover:text-aviary-400 transition-colors duration-200 flex items-center gap-2 group {{ if eq .Language $.Site.Language }}text-aviary-400{{ end }}">
+                                    <span class="w-1 h-1 rounded-full {{ if eq .Language $.Site.Language }}bg-aviary-400{{ else }}bg-plumage-600 group-hover:bg-aviary-400{{ end }} transition-colors"></span>
+                                    {{ .Language.LanguageName }}
+                                    {{ if eq .Language $.Site.Language }}
+                                        <span class="text-xs text-aviary-500">({{ i18n "current" | default "current" }})</span>
+                                    {{ end }}
+                                </a>
+                            </li>
+                        {{ end }}
+                    </ul>
+                </div>
             </div>
         </div>
 
         <!-- Bottom Bar -->
-        <div class="border-t border-sage-700 mt-8 pt-8 text-center text-sm text-sage-400">
-            <p>
-                &copy; {{ now.Year }} {{ i18n "site_name" | default "Dribbr" }}. {{ i18n "footer_rights" | default "All rights reserved." }}
-            </p>
-            <p class="mt-2 text-sage-500 text-xs">
-                {{ i18n "footer_bird_name" | default "The first 4 letters are \"bird\" in reverse, ending with \"br\" for breeder." }}
-            </p>
+        <div class="border-t border-plumage-800">
+            <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-6">
+                <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+                    <p class="text-sm text-plumage-500">
+                        &copy; {{ now.Year }} {{ i18n "site_name" | default "Dribbr" }}. {{ i18n "footer_rights" | default "All rights reserved." }}
+                    </p>
+                    <div class="flex items-center gap-6 text-sm text-plumage-500">
+                        <span class="flex items-center gap-2">
+                            <svg class="w-4 h-4 text-aviary-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+                            </svg>
+                            {{ i18n "footer_made_with" | default "Made with love for breeders" }}
+                        </span>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </footer>

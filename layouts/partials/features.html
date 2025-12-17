@@ -1,57 +1,132 @@
-<section id="features" class="section-container bg-white/50">
-    <div class="text-center mb-16">
-        <h2 class="heading-lg mb-4">
+<section id="features" class="section-container relative">
+    <!-- Section header -->
+    <div class="text-center mb-20">
+        <span class="badge badge-feather mb-6 inline-flex">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+            </svg>
+            {{ i18n "features_badge" | default "Powerful Features" }}
+        </span>
+        <h2 class="heading-lg mb-6">
             {{ i18n "features_title" | default "Everything you need to manage your aviary" }}
         </h2>
-        <p class="text-xl text-sage-600 max-w-2xl mx-auto">
+        <p class="text-xl text-plumage-600 max-w-2xl mx-auto leading-relaxed">
             {{ i18n "features_subtitle" | default "Modern tools designed for serious bird breeders" }}
         </p>
     </div>
 
-    <div class="grid md:grid-cols-3 gap-8">
+    <!-- Feature cards grid -->
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
         <!-- Feature 1: Bird Management -->
-        <div class="card">
-            <div class="feature-icon bg-bird-blue-100 text-bird-blue-500">
+        <div class="card group">
+            <div class="feature-icon feature-icon-aviary">
                 <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/>
                 </svg>
             </div>
-            <h3 class="heading-md mb-3 text-xl">
+            <h3 class="heading-md mb-4">
                 {{ i18n "feature_1_title" | default "Bird Management" }}
             </h3>
-            <p class="text-sage-600 leading-relaxed">
+            <p class="text-plumage-600 leading-relaxed mb-6">
                 {{ i18n "feature_1_description" | default "Keep detailed records of each bird including genetics, health history, lineage, and more. Everything at your fingertips." }}
             </p>
+            <div class="flex flex-wrap gap-2">
+                <span class="text-xs font-accent text-plumage-500 bg-plumage-100 px-3 py-1 rounded-full">{{ i18n "feature_tag_genetics" | default "Genetics" }}</span>
+                <span class="text-xs font-accent text-plumage-500 bg-plumage-100 px-3 py-1 rounded-full">{{ i18n "feature_tag_lineage" | default "Lineage" }}</span>
+                <span class="text-xs font-accent text-plumage-500 bg-plumage-100 px-3 py-1 rounded-full">{{ i18n "feature_tag_health" | default "Health" }}</span>
+            </div>
         </div>
 
         <!-- Feature 2: Breeding Management -->
-        <div class="card">
-            <div class="feature-icon bg-bird-green-100 text-bird-green-500">
+        <div class="card group">
+            <div class="feature-icon feature-icon-feather">
                 <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
                 </svg>
             </div>
-            <h3 class="heading-md mb-3 text-xl">
+            <h3 class="heading-md mb-4">
                 {{ i18n "feature_2_title" | default "Smart Breeding" }}
             </h3>
-            <p class="text-sage-600 leading-relaxed">
+            <p class="text-plumage-600 leading-relaxed mb-6">
                 {{ i18n "feature_2_description" | default "Plan and track breeding pairs, monitor egg development, and record offspring details with intelligent suggestions and reminders." }}
             </p>
+            <div class="flex flex-wrap gap-2">
+                <span class="text-xs font-accent text-plumage-500 bg-plumage-100 px-3 py-1 rounded-full">{{ i18n "feature_tag_pairs" | default "Pairs" }}</span>
+                <span class="text-xs font-accent text-plumage-500 bg-plumage-100 px-3 py-1 rounded-full">{{ i18n "feature_tag_eggs" | default "Eggs" }}</span>
+                <span class="text-xs font-accent text-plumage-500 bg-plumage-100 px-3 py-1 rounded-full">{{ i18n "feature_tag_reminders" | default "Reminders" }}</span>
+            </div>
         </div>
 
         <!-- Feature 3: Visual Interface -->
-        <div class="card">
-            <div class="feature-icon bg-bird-orange-100 text-bird-orange-500">
+        <div class="card group md:col-span-2 lg:col-span-1">
+            <div class="feature-icon feature-icon-wingspan">
                 <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"/>
+                </svg>
+            </div>
+            <h3 class="heading-md mb-4">
+                {{ i18n "feature_3_title" | default "Visual Cage Management" }}
+            </h3>
+            <p class="text-plumage-600 leading-relaxed mb-6">
+                {{ i18n "feature_3_description" | default "Interactive visual interface for managing your breeding setup. See your entire operation at a glance with smart organization." }}
+            </p>
+            <div class="flex flex-wrap gap-2">
+                <span class="text-xs font-accent text-plumage-500 bg-plumage-100 px-3 py-1 rounded-full">{{ i18n "feature_tag_visual" | default "Visual" }}</span>
+                <span class="text-xs font-accent text-plumage-500 bg-plumage-100 px-3 py-1 rounded-full">{{ i18n "feature_tag_drag" | default "Drag & Drop" }}</span>
+                <span class="text-xs font-accent text-plumage-500 bg-plumage-100 px-3 py-1 rounded-full">{{ i18n "feature_tag_overview" | default "Overview" }}</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Additional features row -->
+    <div class="mt-16 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="flex items-start gap-4 p-6 rounded-2xl bg-white/50 hover:bg-white/80 transition-colors duration-300">
+            <div class="flex-shrink-0 w-10 h-10 rounded-xl bg-aviary-100 flex items-center justify-center text-aviary-600">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+            </div>
+            <div>
+                <h4 class="font-display font-semibold text-plumage-900 mb-1">{{ i18n "feature_mini_1_title" | default "Timeline View" }}</h4>
+                <p class="text-sm text-plumage-600">{{ i18n "feature_mini_1_desc" | default "Track events chronologically" }}</p>
+            </div>
+        </div>
+
+        <div class="flex items-start gap-4 p-6 rounded-2xl bg-white/50 hover:bg-white/80 transition-colors duration-300">
+            <div class="flex-shrink-0 w-10 h-10 rounded-xl bg-feather-100 flex items-center justify-center text-feather-600">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
                 </svg>
             </div>
-            <h3 class="heading-md mb-3 text-xl">
-                {{ i18n "feature_3_title" | default "Visual Cage Management" }}
-            </h3>
-            <p class="text-sage-600 leading-relaxed">
-                {{ i18n "feature_3_description" | default "Interactive visual interface for managing your breeding setup. See your entire operation at a glance with smart organization." }}
-            </p>
+            <div>
+                <h4 class="font-display font-semibold text-plumage-900 mb-1">{{ i18n "feature_mini_2_title" | default "Statistics" }}</h4>
+                <p class="text-sm text-plumage-600">{{ i18n "feature_mini_2_desc" | default "Insights at a glance" }}</p>
+            </div>
+        </div>
+
+        <div class="flex items-start gap-4 p-6 rounded-2xl bg-white/50 hover:bg-white/80 transition-colors duration-300">
+            <div class="flex-shrink-0 w-10 h-10 rounded-xl bg-wingspan-100 flex items-center justify-center text-wingspan-600">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"/>
+                </svg>
+            </div>
+            <div>
+                <h4 class="font-display font-semibold text-plumage-900 mb-1">{{ i18n "feature_mini_3_title" | default "Photo Gallery" }}</h4>
+                <p class="text-sm text-plumage-600">{{ i18n "feature_mini_3_desc" | default "Document your birds" }}</p>
+            </div>
+        </div>
+
+        <div class="flex items-start gap-4 p-6 rounded-2xl bg-white/50 hover:bg-white/80 transition-colors duration-300">
+            <div class="flex-shrink-0 w-10 h-10 rounded-xl bg-nest-100 flex items-center justify-center text-nest-600">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                </svg>
+            </div>
+            <div>
+                <h4 class="font-display font-semibold text-plumage-900 mb-1">{{ i18n "feature_mini_4_title" | default "Calendar" }}</h4>
+                <p class="text-sm text-plumage-600">{{ i18n "feature_mini_4_desc" | default "Never miss important dates" }}</p>
+            </div>
         </div>
     </div>
 </section>
